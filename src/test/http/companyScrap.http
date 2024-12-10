@@ -1,15 +1,15 @@
-### company
+### insert company
 POST http://localhost:8080/company
 Content-Type: application/json
 
 {
-  "ticker": "COKE"
+  "ticker": "MMM"
 }
 
-### company list
+### list company
 GET http://localhost:8080/company
 
-### comapy name search
+### search comapy name
 GET http://localhost:8080/finance/dividend/3M Company (MMM)
 
 ### autocomplete
