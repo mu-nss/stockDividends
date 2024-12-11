@@ -16,6 +16,7 @@ import zerobase.stockdividends.persist.entity.DividendEntity;
 import zerobase.stockdividends.scraper.Scraper;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
@@ -85,6 +86,19 @@ public class CompanyService {
     // 데이터 삭제
     public void deleteAutocompleteKeyWord(String keyword) {
         this.trie.remove(keyword);
+    }
+
+    public String deleteCompany(String ticker) {
+        var company = this.companyRepository.findByTicker(ticker)
+                .orElseThrow(() -> new RuntimeException("존재하지 않는 회사입니다."));
+
+        this.dividendRepository.deleteAllByCompanyId(company.getId());
+        this.companyRepository.delete(company);
+
+        // trie에 있는 데이터 지움
+        this.deleteAutocompleteKeyWord(company.getName());
+
+        return company.getName();
     }
 
 }

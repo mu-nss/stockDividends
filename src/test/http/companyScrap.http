@@ -1,6 +1,7 @@
 ### insert company
 POST http://localhost:8080/company
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJncmFjZSIsInJvbGVzIjpbIlJPTEVfUkVBRCIsIlJPTEVfV1JJVEUiXSwiaWF0IjoxNzMzODk4NTQ1LCJleHAiOjE3MzM5MDIxNDV9.VedlrPsqLkIQqgaC0O4RSijNgK52oejtmep2pA7rxka5ue_xH3-wYezdgfy7Gn8G03JIuVYw-gWdSPqC1y0Pzw
 
 {
   "ticker": "MMM"
@@ -11,6 +12,11 @@ GET http://localhost:8080/company
 
 ### search comapy name
 GET http://localhost:8080/finance/dividend/3M Company (MMM)
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJncmFjZSIsInJvbGVzIjpbIlJPTEVfUkVBRCIsIlJPTEVfV1JJVEUiXSwiaWF0IjoxNzMzODk4NTQ1LCJleHAiOjE3MzM5MDIxNDV9.VedlrPsqLkIQqgaC0O4RSijNgK52oejtmep2pA7rxka5ue_xH3-wYezdgfy7Gn8G03JIuVYw-gWdSPqC1y0Pzw
+
+### delete comapy name
+DELETE http://localhost:8080/company/MMM
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJncmFjZSIsInJvbGVzIjpbIlJPTEVfUkVBRCIsIlJPTEVfV1JJVEUiXSwiaWF0IjoxNzMzODk4NTQ1LCJleHAiOjE3MzM5MDIxNDV9.VedlrPsqLkIQqgaC0O4RSijNgK52oejtmep2pA7rxka5ue_xH3-wYezdgfy7Gn8G03JIuVYw-gWdSPqC1y0Pzw
 
 ### autocomplete
 GET http://localhost:8080/company/autocomplete?keyword=I
