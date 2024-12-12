@@ -44,5 +44,5 @@
     - 로그인 API
     - 회원가입이 되어있고, 아이디/패스워드 정보가 옳은 경우 JWT 발급
 
-## :heavy_exclamation_mark: 에러 발생 및 해결
+## :heavy_exclamation_mark: 기술적 이슈 및 해결
 1. 스크래퍼 > useragent 추가
