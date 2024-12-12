@@ -53,6 +53,7 @@ public class ScraperScheduler {
 
                         if (!exists) {
                             this.dividendRepository.save(e);
+                            log.info("insert new dividend -> " + e.toString());
                         }
                     });
 
